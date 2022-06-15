@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import $ from 'jquery';
+import React from 'react';
+import { Navbar } from 'react-bootstrap';
+// import $ from 'jquery';
 import { Link } from 'react-router-dom';
 import './Header.scss'
 const Header = () => {

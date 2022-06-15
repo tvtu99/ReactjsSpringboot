@@ -15,17 +15,17 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/">
                   <span>Tuyển sinh</span>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/">
                   <span>Tin Tức</span>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/">
                   <span>Chương Trình Đào Tạo</span>
                 </a>
               </li>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
         <div className="main-r col-md-9">
           <div className="daumuc">
-            <a href="">
+            <a href="/">
               <h3>Tin Tức Tuyển Sinh</h3>
             </a>
           </div>

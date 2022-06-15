@@ -1,9 +1,4 @@
-
 import { Routes, Route } from 'react-router-dom'
-// import Home from '../Page/Home'
-// import WebOne from '../Page/web1'
-// import WebTwo from '../Page/web2'
-// import WebThree from '../Page/web3'
 import TrangChu from '../components/home/Home'
 import Login from '../components/login/Login'
 

@@ -1,31 +1,27 @@
-import React, { Component } from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import $ from 'jquery';
-import { Link } from 'react-router-dom';
-
+import React from 'react';
 const Footer = () => {
     return <>
         <div className="page-footer row">
             <div className="col-md-3 bd">
                 <p style={{ color: "#fff" }}>Bản Đồ</p>
-                <a href=""><img src="../img/TLU-map.png" alt="map-thuy-loi" style={{ width: "90%" }} /></a>
+                <a href="/"><img src="../img/TLU-map.png" alt="map-thuy-loi" style={{ width: "90%" }} /></a>
             </div>
             <div className="font-size-a nav-footer col-md-3">
                 <ul>
                     <h4 style={{ textAlign: "center" }}>ĐẠI HỌC THỦY LỢI</h4>
-                    <li><a href="">TUYỂN SINH</a></li>
-                    <li><a href="">ĐÀO TẠO</a></li>
-                    <li><a href="">KHOA HỌC CÔNG NGHỆ</a></li>
-                    <li><a href="">SINH VIÊN</a></li>
-                    <li><a href="">ĐỐI Ngoại</a></li>
+                    <li><a href="/">TUYỂN SINH</a></li>
+                    <li><a href="/">ĐÀO TẠO</a></li>
+                    <li><a href="/">KHOA HỌC CÔNG NGHỆ</a></li>
+                    <li><a href="/">SINH VIÊN</a></li>
+                    <li><a href="/">ĐỐI Ngoại</a></li>
                 </ul>
             </div>
             <div className="font-size-a nav-footer col-md-3">
                 <ul>
                     <h4 style={{ textAlign: "center" }}>TIN TỨC-THÔNG BÁO</h4>
-                    <li><a href="">TIN TỨC</a></li>
-                    <li><a href="">THÔNG BÁO</a></li>
-                    <li><a href="">TIN VIDEO</a></li>
+                    <li><a href="/">TIN TỨC</a></li>
+                    <li><a href="/">THÔNG BÁO</a></li>
+                    <li><a href="/">TIN VIDEO</a></li>
                 </ul>
             </div>
             <div className="col-md-3 dc">
