@@ -5,14 +5,34 @@ import './Login.scss'
 
 export default function Login() {
 
+    const login =async () => {
+        // POST request using fetch with async/await
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: 'React POST Request Example' })
+        };
+        const response = await fetch('https://reqres.in/api/posts', requestOptions);
+        const data = await response.json();
+        console.log(data);
+        
+    }
     const [validated, setValidated] = useState(false);
     const handleSubmit = (event: { currentTarget: any; preventDefault: () => void; stopPropagation: () => void; }) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
+          console.log("ok");
         }
+        else{
+            event.preventDefault();
+            event.stopPropagation();
+            login();
+            }
         setValidated(true);
+        
+        
       };
     return (
         <div className="row no-gutter bg-image" style={{ padding: "100px" }}>

@@ -8,20 +8,17 @@ import Router from './routes/router';
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import './App.css';
-// import rootReducer from './reducers'
-// import { createStore } from 'redux'
-
-// const store = createStore(rootReducer)
+import store from './redux';
 
 function App() {
   return (
-    // <Provider store={store}>
+    <Provider store={store}>
       <div className="App">
         <Header/>
         <Router/>
         <Footer/>
       </div>
-    //</Provider>
+    </Provider>
     
   );
 }
