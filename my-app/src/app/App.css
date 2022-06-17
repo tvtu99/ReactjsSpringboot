@@ -1,12 +1,12 @@
 .login,
 .image {
-    min-height: 100vh
+    min-height: 100vh;
 }
 
 .bg-image {
-    background-image: url('../logo.svg');
+    background-image: url("../logo.svg");
     background-size: cover;
-    background-position: center center
+    background-position: center center;
 }
 .container-fluid {
     width: 100%;
@@ -23,16 +23,16 @@
 .navbar-light .navbar-nav .nav-link:hover {
     color: blue;
 }
-.bg-light-tu{
-    background-color:#56a4fe !important;
+.bg-light-tu {
+    background-color: #56a4fe !important;
 }
-.header{
-	padding: 10px 40px;
+.header {
+    padding: 0px 40px;
     height: auto;
-    background-color:rgb(233, 225, 206);
+    background-color: rgb(233, 225, 206);
 }
 
-.header nav a img{
+.header nav a img {
     width: 80px;
 }
 .btn-outline-success {
@@ -51,48 +51,47 @@
 .font-size-a a {
     font-size: 12px;
 }
-.font-size-a ul h4{
+.font-size-a ul h4 {
     font-size: 16px;
 }
 /* chinh font-size chu*/
 .font-size-a a {
     font-size: 12px;
 }
-.font-size-a ul h4{
+.font-size-a ul h4 {
     font-size: 16px;
 }
 /*main-l*/
-.dm{
+.dm {
     margin-top: 10px;
     width: 100%;
     border: solid 5px #56a4fe;
     border-top: 22px solid #56a4fe;
 }
 ul.menu li a {
-    border-bottom: 2px solid #E7E8E6;
-    color: #626A69;
+    border-bottom: 2px solid #e7e8e6;
+    color: #626a69;
     display: block;
     outline: none;
     padding: 6px 4px;
 }
-ul.menu li a span{
+ul.menu li a span {
     font-size: 16px;
     color: black;
 }
-ul.menu li a span:hover{
+ul.menu li a span:hover {
     font-size: 16px;
     color: blue;
 }
-ul.menu li{
+ul.menu li {
     list-style: none;
 }
 
-
 ul li a.active {
-	color: #2C79B3;
-	font-weight: bold;
+    color: #2c79b3;
+    font-weight: bold;
 }
-ul.menu li a:hover{
+ul.menu li a:hover {
     color: #000;
 }
 .box-check {
@@ -109,174 +108,179 @@ ul.menu li a:hover{
     padding-bottom: 15px;
 }
 /*main-r*/
-.daumuc{
+.daumuc {
     padding-top: 10px;
 }
 
-.daumuc a h3,.daumuc h3{
+.daumuc a h3,
+.daumuc h3 {
     padding-top: 5px;
     display: block;
     height: 33px;
-    background:#56a4fe;
-    border-bottom: 1px solid #E7E8E6;
-    color: #FFFFFF;
+    background: #56a4fe;
+    border-bottom: 1px solid #e7e8e6;
+    color: #ffffff;
     font-size: 120%;
 }
 /*footer*/
-.copyandmxh{
+.copyandmxh {
     display: flex;
     height: auto;
-    background-color:#4793eb;
+    background-color: #4793eb;
 }
-.bd{
-    color: #fff;display: block;
+.bd {
+    color: #fff;
+    display: block;
     border-right: 1px solid #fff;
     padding: 20px;
 }
-.dc{
+.dc {
     padding-top: 20px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 15px;
 }
-.page-footer{
-	padding: 10px 40px;
+.page-footer {
+    padding: 10px 40px;
     display: flex;
     height: auto;
-    background-color:#56a4fe;
-
+    background-color: #56a4fe;
 }
-.nav-footer  ul li{
+.nav-footer ul li {
     list-style: none;
     text-align: center;
 }
-.mxh ul li{
+.mxh ul li {
     list-style: none;
     display: inline;
     text-align: center;
 }
-.nav-footer p{
+.nav-footer p {
     color: #fff;
 }
-.nav-footer ul li a,h4{
+.nav-footer ul li a,
+h4 {
     color: #fff;
 }
-.nav-footer ul li a:hover{
+.nav-footer ul li a:hover {
     color: blue;
 }
-.nav-footer{
+.nav-footer {
     padding-top: 20px;
     border-right: 1px solid #fff;
 }
 
-.mxh a{
+.mxh a {
     display: inline-block;
-	width: 40px;
-	height: 40px;
-	background: #00000059;
-	color: #fff;
-	text-align: center;
-	border-radius: 50%;
-	line-height: 40px;
+    width: 40px;
+    height: 40px;
+    background: #00000059;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
 }
-.copy{
+.copy {
     display: inline-block;
     text-align: left;
     margin: auto;
 }
-.copy p{
+.copy p {
     font-size: 16px;
-    color: #FFFFFF;
+    color: #ffffff;
     padding-top: 12px;
 }
-.mxh{
-padding-top: 20px !important;
+.mxh {
+    padding-top: 20px !important;
 }
 
-.label,.value{
+.label,
+.value {
     display: block;
     float: left;
     margin-left: 10px;
 }
 
 /* login.css */
-body {font-family: Arial, Helvetica, sans-serif;}
-.logo{
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
     float: left;
     margin: 20px;
 }
-.header{
+.header {
     height: auto;
     background-color: #56a4fe;
 }
-.header .cm h2{
+.header .cm h2 {
     padding-top: 30px;
     color: #fff;
 }
-.header .dndx,.header .dndx a{
+.header .dndx,
+.header .dndx a {
     text-align: center;
     margin: auto;
     color: #fff;
 }
 form {
-  border: 3px solid #f1f1f1;
+    border: 3px solid #f1f1f1;
 }
-.form-ac{
-  margin: 50px auto 80px;
-  width: 800px;
+.form-ac {
+    margin: 50px auto 80px;
+    width: 800px;
 }
 
-.container input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+.container input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 button {
-	background-color: #007bff !important;
-   color: white !important;
-  padding: 14px 20px;
-  margin: 0px;
-  border: none;
-  cursor: pointer;
-  border-color: unset !important;
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    border-color: unset;
 }
 
 button:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .create-ac {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
 }
 
 .imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+    text-align: center;
+    margin: 24px 0 12px 0;
 }
 
-
-
 .container {
-  padding: 16px;
+    padding: 16px;
 }
 
 span .pass {
-  float: right;
-  padding-top: 16px;
+    float: right;
+    padding-top: 16px;
 }
-.value input{
-  height: 25px;
+.value input {
+    height: 25px;
 }
 
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane button.dtsp-paneButton{
-    opacity: .9;
+div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane button.dtsp-paneButton {
+    opacity: 0.9;
 }
-.ml-20{
+.ml-20 {
     margin-left: 20px;
 }

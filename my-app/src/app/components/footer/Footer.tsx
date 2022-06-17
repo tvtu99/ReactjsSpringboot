@@ -4,7 +4,7 @@ const Footer = () => {
         <div className="page-footer row">
             <div className="col-md-3 bd">
                 <p style={{ color: "#fff" }}>Bản Đồ</p>
-                <a href="/"><img src="../img/TLU-map.png" alt="map-thuy-loi" style={{ width: "90%" }} /></a>
+                <a href="/"><img src="assets/img/TLU-map.png" alt="map-thuy-loi" style={{ width: "90%" }} /></a>
             </div>
             <div className="font-size-a nav-footer col-md-3">
                 <ul>

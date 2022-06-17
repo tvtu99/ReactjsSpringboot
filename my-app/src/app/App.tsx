@@ -8,8 +8,7 @@ import Router from './routes/router';
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import './App.css';
-import store from './redux';
-
+import store from './redux'
 function App() {
   return (
     <Provider store={store}>
