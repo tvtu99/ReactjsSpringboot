@@ -1,10 +1,26 @@
 import React, { useState } from 'react'
-import { Form } from 'react-bootstrap'
+import { Form, ToastHeader } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import './Register.scss'
 export default function Login() {
 
-    const login = async () => {
+    const initUserRegister = {
+        email: "",
+        name: "",
+        password: "",
+        rePassword: "",
+        phone: ""
+    }
+    const credentialChange = (event: { target: { name: any; value: any; }; }) => {
+        setUserRegister({
+            ...userRegister,
+            [event.target.name]: event.target.value
+        });
+    }
+    const [userRegister, setUserRegister] = useState(initUserRegister);
+
+    const register = async () => {
         // POST request using fetch with async/await
         const requestOptions = {
             method: 'GET',
@@ -16,24 +32,40 @@ export default function Login() {
         console.log(data);
     }
     const [validated, setValidated] = useState(false);
-    const handleSubmit = (event: { currentTarget: any; preventDefault: () => void; stopPropagation: () => void; }) => {
+    const handleSubmitRegister = (event: { currentTarget: any; preventDefault: () => void; stopPropagation: () => void; }) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
-            console.log("ok");
+            toast.error('Input fail!');
+        }
+        else if (userRegister.password !== userRegister.rePassword) {
+            event.preventDefault();
+            event.stopPropagation();
+            toast.warn('RePassword fail!');
         }
         else {
             event.preventDefault();
             event.stopPropagation();
-            login();
+            // register();
+            console.log(userRegister);
+            
         }
         setValidated(true);
-
-
     };
     return (
         <>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <div className="row no-gutter bg-image" style={{ padding: "100px" }}>
                 <div className="col-md-8 col-lg-8 col-xl-8 mx-auto bg-light">
                     <div className=" d-flex align-items-center py-5">
@@ -42,24 +74,24 @@ export default function Login() {
                                 <div className="col-lg-9 col-xl-9 mx-auto">
                                     <h2 className="align-items-center text-center">Đăng Ký Tài Khoản</h2>
                                     <br />
-                                    <Form noValidate validated={validated} onSubmit={handleSubmit} className="login-form d-flex flex-column">
+                                    <Form noValidate validated={validated} onSubmit={handleSubmitRegister} className="login-form d-flex flex-column">
                                         <Form.Group className="form-group mb-3">
-                                            <Form.Control id="name" type="text" name="name" placeholder="Tên Người Dùng" required
+                                            <Form.Control id="name" type="text" name="name" placeholder="Tên Người Dùng" required onChange={credentialChange} 
                                                 className="form-control rounded-pill border-0 shadow-sm px-4 text-danger" />
                                             <br />
                                         </Form.Group>
                                         <Form.Group className="form-group mb-3">
-                                            <Form.Control id="email" type="email" name="email" placeholder="Địa chỉ Email" required
+                                            <Form.Control id="email" type="email" name="email" placeholder="Địa chỉ Email" required onChange={credentialChange} 
                                                 className="form-control rounded-pill border-0 shadow-sm px-4" />
                                         </Form.Group>
                                         <Form.Group className="form-group mb-3">
-                                            <Form.Control id="password" type="password" name="password" placeholder="Mật Khẩu" required
+                                            <Form.Control id="password" type="password" name="password" placeholder="Mật Khẩu" required onChange={credentialChange} 
                                                 className="form-control rounded-pill border-0 shadow-sm px-4 text-danger" />
                                             <br />
                                         </Form.Group>
                                         <Form.Group className="form-group mb-3">
                                             <Form.Control id="rePassword" type="password" name="rePassword" placeholder="Nhập lại Mật Khẩu"
-                                                required className="form-control rounded-pill border-0 shadow-sm px-4 text-danger" />
+                                                required onChange={credentialChange} className="form-control rounded-pill border-0 shadow-sm px-4 text-danger" />
                                             <br />
                                         </Form.Group>
                                         <button type="submit" className="btn btn-danger btn-block text-uppercase mb-2 rounded-pill shadow-sm">Đăng Ký</button>
