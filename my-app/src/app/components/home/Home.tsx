@@ -47,6 +47,7 @@ export default function Home() {
             <div style={{ paddingLeft: "10px", textAlign: "left" }}>
               Bạn đã có nguyện vọng, mong muốn của mình chưa chưa?
               <table>
+                <thead>
                 <tr>
                   <td>
                     <input type="radio" name="check" value="Đã Có" />
@@ -59,6 +60,7 @@ export default function Home() {
                     <label htmlFor="ctl02_rbl1_1">Chưa Có</label>
                   </td>
                 </tr>
+                </thead>
               </table>
               <input
                 type="submit"

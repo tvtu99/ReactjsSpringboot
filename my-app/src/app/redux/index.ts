@@ -1,8 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+// import { configureStore } from "@reduxjs/toolkit";
 // import { createEpicMiddleware } from "redux-observable";
 import { rootReducer } from "./modules/root"; 
 // import { rootEpic, rootReducer } from "./modules/root";
-import {combineReducers, createStore} from 'redux'
+import { createStore} from 'redux'
 
 // const epicMiddleware = createEpicMiddleware();
 
