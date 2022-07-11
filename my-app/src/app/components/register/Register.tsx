@@ -21,15 +21,21 @@ export default function Register() {
     const [userRegister, setUserRegister] = useState(initUserRegister);
 
     const register = async () => {
-        // POST request using fetch with async/await
+        // POST request using  fetch with async/await
         const requestOptions = {
-            method: 'GET',
-            // headers: { 'Content-Type': 'application/json' },
-            // body: JSON.stringify({ title: 'React POST Request Example' })
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(initUserRegister)
         };
-        const response = await fetch('/test', requestOptions);
+        const response = await fetch('/register', requestOptions);
         const data = await response.json();
         console.log(data);
+        if (data.message === "success") {
+            // 
+        }
+        else if(data.message === "email"){
+            //
+        }
     }
     const [validated, setValidated] = useState(false);
     const handleSubmitRegister = (event: { currentTarget: any; preventDefault: () => void; stopPropagation: () => void; }) => {
@@ -47,7 +53,7 @@ export default function Register() {
         else {
             event.preventDefault();
             event.stopPropagation();
-            // register();
+            register();
             console.log(userRegister);
             
         }

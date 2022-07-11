@@ -7,7 +7,7 @@ export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILED = "LOGIN_FAILED";
 export const LOGIN_CANCELLED = "LOGIN_CANCELLED";
 
-export const loginA = (user: User): Action => ({
+export const login = (user: User): Action => ({
 	type: LOGIN,
 	payload: user,
 });
