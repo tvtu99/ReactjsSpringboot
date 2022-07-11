@@ -3,7 +3,7 @@ import { Form, ToastHeader } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import './Register.scss'
-export default function Login() {
+export default function Register() {
 
     const initUserRegister = {
         email: "",

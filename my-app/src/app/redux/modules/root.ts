@@ -1,12 +1,17 @@
-import { combineReducers } from "redux";
-// import { combineEpics } from "redux-observable";
-// import { loginReducer, logoutEpic } from "./login";
+import { combineEpics } from "redux-observable";
+import { loginEpic, authReducer, fetchPermissionsEpic, fetchUserEpic , onFetchUserSuccessEpic } from "./auth";
+// import { loginEpic, authReducer } from "./auth";
 
-// export const rootEpic: any = combineEpics(
-// 	logoutEpic,
-// );
-import { loginReducer } from "./login";
 
-export const rootReducer = combineReducers({
-	login:loginReducer,
-});
+export const rootEpic: any = combineEpics(
+	loginEpic,
+	// fetchUserEpic,
+	// onFetchUserSuccessEpic,
+	// fetchPermissionsEpic,
+	// logoutEpic,
+	
+);
+
+export const rootReducer = {
+	auth: authReducer
+}
