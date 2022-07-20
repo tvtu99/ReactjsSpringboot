@@ -1,17 +1,20 @@
 import { combineEpics } from "redux-observable";
 import { loginEpic, authReducer, fetchPermissionsEpic, fetchUserEpic , onFetchUserSuccessEpic } from "./auth";
-// import { loginEpic, authReducer } from "./auth";
+import { registerEpic, registerReducer } from "./register";
 
 
-export const rootEpic: any = combineEpics(
+export const rootEpic = combineEpics(
 	loginEpic,
+	registerEpic,
 	// fetchUserEpic,
 	// onFetchUserSuccessEpic,
 	// fetchPermissionsEpic,
 	// logoutEpic,
 	
+	
 );
 
 export const rootReducer = {
-	auth: authReducer
+	auth: authReducer,
+	register: registerReducer
 }

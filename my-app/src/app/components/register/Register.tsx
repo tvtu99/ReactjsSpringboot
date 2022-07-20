@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Form, ToastHeader } from 'react-bootstrap'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { register } from '../../redux/modules/register/actions';
+
 import './Register.scss'
 export default function Register() {
 
@@ -20,22 +23,24 @@ export default function Register() {
     }
     const [userRegister, setUserRegister] = useState(initUserRegister);
 
-    const register = async () => {
-        // POST request using  fetch with async/await
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(initUserRegister)
-        };
-        const response = await fetch('/register', requestOptions);
-        const data = await response.json();
-        console.log(data);
-        if (data.message === "success") {
-            // 
-        }
-        else if(data.message === "email"){
-            //
-        }
+    const dispatch = useDispatch();
+    const registerSubmit = async () => {
+        // // POST request using  fetch with async/await
+        // const requestOptions = {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(initUserRegister)
+        // };
+        // const response = await fetch('/register', requestOptions);
+        // const data = await response.json();
+        // console.log(data);
+        // if (data.message === "success") {
+        //     // 
+        // }
+        // else if(data.message === "email"){
+        //     //
+        // }
+        dispatch(register(userRegister));
     }
     const [validated, setValidated] = useState(false);
     const handleSubmitRegister = (event: { currentTarget: any; preventDefault: () => void; stopPropagation: () => void; }) => {
@@ -53,7 +58,7 @@ export default function Register() {
         else {
             event.preventDefault();
             event.stopPropagation();
-            register();
+            registerSubmit();
             console.log(userRegister);
             
         }
